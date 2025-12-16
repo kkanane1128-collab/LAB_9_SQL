@@ -3,7 +3,7 @@ from sqlalchemy import (create_engine, Column, Integer, String,
 from sqlalchemy.orm import declarative_base, relationship, sessionmaker
 from datetime import date
 
-MYSQL_PASSWORD = "2005 04" 
+MYSQL_PASSWORD = "*******" 
 DATABASE_URL = f"mysql+pymysql://root:{MYSQL_PASSWORD}@localhost/universite"
 
 engine = create_engine(DATABASE_URL)
@@ -62,4 +62,5 @@ class Examen(Base):
 if __name__ == '__main__':
     print("Création des tables dans la base universite...")
     Base.metadata.create_all(engine)
+
     print("Tables créées.")
