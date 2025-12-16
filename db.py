@@ -1,7 +1,7 @@
 import mysql.connector
 from mysql.connector import pooling
 
-MYSQL_PASSWORD = "2005 04" 
+MYSQL_PASSWORD = "******" 
 
 pool = pooling.MySQLConnectionPool(
     pool_name="app_pool",
@@ -27,4 +27,5 @@ if __name__ == '__main__':
         print("db.py : Connexion au pool réussie.")
         conn.close() 
     else:
+
         print("db.py : Échec de la connexion.")
